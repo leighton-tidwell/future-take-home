@@ -27,7 +27,7 @@ Or you can view the live site [here](https://future-take-home.vercel.app/)
 - This app was deployed on Vercel.
 - The linter being used is ESLint.
 - The code was documented with comments to point out some intentional decisions.
-- The total time to complete this assessment was 3 hours.
+- The total time to complete this assessment was 4 hours.
 
 ## If I had more time/this was a real product
 
