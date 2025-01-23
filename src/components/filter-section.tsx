@@ -33,7 +33,13 @@ export function FilterSection({
               <Checkbox
                 id={option}
                 checked={checkedItems.includes(option) ?? false}
-                onChange={() => onChange([...checkedItems, option])}
+                onChange={() => {
+                  if (checkedItems.includes(option)) {
+                    onChange(checkedItems.filter((item) => item !== option));
+                  } else {
+                    onChange([...checkedItems, option]);
+                  }
+                }}
               />
               <label htmlFor={option}>{option}</label>
             </div>
