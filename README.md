@@ -36,7 +36,7 @@ Or you can view the live site [here](https://future-take-home.vercel.app/)
 - The audio by the title would be an icon that just plays the audio.
 - I would have broken out more components into their own files.
 - I would have added proper react testing library tests.
-- If the constraint was not a 'single page app', I would have taken better advantage of the routing in Next.js to make use of more under the hood caching. For example: I would have made each exercise detail page its own route and used the layout system to make it feel like a single page app. I just didn't want to go out of the project requirements and kept it a SPA once you hit the entry point.
-- I would have spent more time on the mobile design.
+- If the constraint was not a 'single page app', I would have taken better advantage of the routing in Next.js to make use of more under the hood caching. For example: I would have made each exercise detail page its own route (using a dynamic route) and used the layout system to make it feel like a single page app. I just didn't want to go out of the project requirements and decided to keep it a SPA once you hit the entry point.
+- I would have spent more time on the mobile design, right now you have to scroll a bit far to see the details.
 - I would have used something like Emotion or PandaCSS for styling (I chose tailwind for the convienence and speed).
 - I would have split my commits up into more logical commits.
