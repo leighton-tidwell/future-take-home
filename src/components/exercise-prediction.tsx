@@ -22,7 +22,7 @@ export function ExercisePrediction({
 
   return (
     <div className="flex flex-row gap-2">
-      <div className="text-md w-1/3 bg-gray-100 rounded-md p-2 flex flex-row gap-2">
+      <div className="text-md w-fit bg-gray-100 rounded-md p-2 flex flex-row gap-2">
         {Array.from({ length: prediction.skill_level.max_level }).map(
           (_, index) => {
             const level = (index + 1) as keyof typeof difficultyLevels;
@@ -31,7 +31,7 @@ export function ExercisePrediction({
             return (
               <div
                 key={index}
-                className={`h-fit w-1/3 items-center justify-center flex p-2 rounded-md ${
+                className={`h-fit w-fit items-center justify-center flex p-2 rounded-md ${
                   isActive
                     ? difficultyLevels[
                         prediction.skill_level
