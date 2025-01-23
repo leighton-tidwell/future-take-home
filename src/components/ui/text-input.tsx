@@ -3,11 +3,13 @@ export function TextInput({
   onChange,
   placeholder,
   size = "md",
+  onKeyDown,
 }: {
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;
   size?: "sm" | "md" | "lg";
+  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 }) {
   const sizeClass =
     size === "sm"
@@ -23,6 +25,7 @@ export function TextInput({
       onChange={(e) => onChange(e.target.value)}
       className={`border border-gray-300 rounded-md ${sizeClass} w-full`}
       placeholder={placeholder}
+      onKeyDown={onKeyDown}
     />
   );
 }

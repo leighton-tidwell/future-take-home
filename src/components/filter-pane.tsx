@@ -49,7 +49,9 @@ export function FilterPane({
     Object.entries(filters).forEach(([key, value]) => {
       if (value !== undefined && value !== "" && Array.isArray(value)) {
         currentParams.set(key, value.join(","));
-      } else if (value !== undefined && value !== "") {
+      } else if (value === "" || value === undefined) {
+        currentParams.delete(key);
+      } else {
         currentParams.set(key, value);
       }
     });
@@ -78,13 +80,7 @@ export function FilterPane({
           <ClearIcon size="sm" />
         </Button>
       </div>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleApplyFilters();
-        }}
-        className="flex flex-col gap-2"
-      >
+      <div className="flex flex-col gap-2">
         <FilterSection
           title="Muscle Groups"
           open={openFilters.muscle_groups}
@@ -123,8 +119,13 @@ export function FilterPane({
           onChange={(value) => handleFilterChange("name", value)}
           placeholder="Search exercises..."
           size="sm"
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleApplyFilters();
+            }
+          }}
         />
-      </form>
+      </div>
       <Button onClick={handleApplyFilters} size="sm">
         Apply
       </Button>
