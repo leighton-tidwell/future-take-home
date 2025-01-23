@@ -68,7 +68,14 @@ export function DetailsPane({
       </div>
       <div className="flex flex-col gap-2">
         {isLoading && (
-          <div className="text-sm text-gray-500">Loading skill level...</div>
+          <div className="text-md w-fit h-10 bg-gray-100 rounded-md p-2 flex flex-row gap-2">
+            {[...Array(3)].map((_, i) => (
+              <div
+                key={i}
+                className="h-10 w-[100px] items-center justify-center flex p-2 rounded-md bg-gray-500 animate-pulse"
+              />
+            ))}
+          </div>
         )}
         {data && <ExercisePrediction prediction={data} />}
       </div>
