@@ -19,7 +19,7 @@ export function DetailsPane({
   );
 
   return (
-    <div className="max-h-dvh overflow-y-auto w-3/4 p-4 gap-4 flex flex-col">
+    <div className="max-h-dvh overflow-y-auto p-4 gap-4 flex flex-col md:col-span-2">
       <div className="flex flex-row gap-2 items-center">
         <h1 className="text-2xl font-bold">{selectedExercise.name}</h1>
         {selectedExercise.audio && (
@@ -34,7 +34,7 @@ export function DetailsPane({
       {selectedExercise.video && (
         <video
           src={selectedExercise.video.url}
-          className="w-full h-96 object-fit"
+          className="w-fit h-96 object-fit"
           controls
         />
       )}

@@ -104,7 +104,7 @@ export function View({ exercises }: { exercises: Exercise[] }) {
   }, [exercises]);
 
   return (
-    <div className="flex flex-row">
+    <div className="grid grid-cols-1 md:grid-cols-3">
       <SidePane
         exercises={filteredExercises}
         possibleMuscleGroups={possibleMuscleGroups}

@@ -25,7 +25,7 @@ export function SidePane({
 
   return (
     /* Using DVH so that this works on mobile */
-    <div className="h-dvh overflow-y-auto w-1/4 p-4 flex flex-col gap-4 bg-gray-100">
+    <div className="h-dvh overflow-y-auto p-4 flex flex-col gap-4 bg-gray-100">
       <h1 className="text-xl font-bold border-b border-gray-300 pb-2">
         Future Exercises
       </h1>
