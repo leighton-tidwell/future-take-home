@@ -6,7 +6,13 @@
 2. Run `npm install`
 3. run `npm run dev`
 
-Or you can view the live site [here](https://future-take-home-assessment.vercel.app/)
+You need to have a .env file with the following:
+
+```
+NEXT_PUBLIC_API_URL=http://localhost:3000
+```
+
+Or you can view the live site [here](https://future-take-home.vercel.app/)
 
 ## Notes
 
